@@ -12,11 +12,14 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace MyLibrary.Web
 {
+    using Data;
+    using Microsoft.EntityFrameworkCore;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -31,6 +34,8 @@ namespace MyLibrary.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddDbContext<MyLibraryContext>(options =>
+                options.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
