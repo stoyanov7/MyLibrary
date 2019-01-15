@@ -1,13 +1,12 @@
 ﻿namespace MyLibrary.Web.Pages.Books
 {
     using System.ComponentModel.DataAnnotations;
-    using System.Linq;
     using System.Threading.Tasks;
     using Data;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.RazorPages;
     using Microsoft.EntityFrameworkCore;
-    using Models;
+    using MyLibrary.Models;
 
     public class AddModel : PageModel
     {
