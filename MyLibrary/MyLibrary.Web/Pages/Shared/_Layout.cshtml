@@ -31,8 +31,8 @@
                 <a class="nav-link" asp-page="/Books/Add">Add book</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="form-inline my-2 my-lg-0" method="get" asp-page="/Search">
+            <input class="form-control mr-sm-2" type="search" name="searchTerm" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><span class="fa fa-search"></span></button>
         </form>
     </div>
