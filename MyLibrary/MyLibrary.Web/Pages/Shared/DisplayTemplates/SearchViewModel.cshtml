@@ -1,0 +1,8 @@
+﻿@using MyLibrary.Web.Models
+@model SearchViewModel
+
+@{
+    var url = Url.Page($"/{Model.Type}s/Details", new { id = Model.Id });
+}
+
+<li><a href="@url">@Html.Raw(Model.SearchResult)</a></li>
