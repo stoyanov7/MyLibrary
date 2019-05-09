@@ -62,7 +62,7 @@
             foreach (var result in this.SearchResult)
             {
                 var markedResult = Regex
-                    .Replace(result.SearchResult, $"({Regex.Escape(this.SearchTerm)}",
+                    .Replace(result.SearchResult, $"({Regex.Escape(this.SearchTerm)})",
                         match => $"<strong class=\"text-danger\">{match.Groups[0].Value}</strong>",
                         RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
