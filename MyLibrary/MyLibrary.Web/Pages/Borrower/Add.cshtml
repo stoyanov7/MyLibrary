@@ -1,0 +1,14 @@
+﻿@page
+@model MyLibrary.Web.Pages.Borrower.AddModel
+@{
+    ViewData["Title"] = "Add";
+}
+
+<div class="container">
+    <h2>Add borrower</h2>
+    @Html.EditorFor(m => m.AddBorrowerBingingModel)
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

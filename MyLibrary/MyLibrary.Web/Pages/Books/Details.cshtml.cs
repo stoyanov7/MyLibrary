@@ -1,6 +1,5 @@
 ﻿namespace MyLibrary.Web.Pages.Books
 {
-    using System.Linq;
     using System.Threading.Tasks;
     using Data;
     using Microsoft.AspNetCore.Mvc;
@@ -15,6 +14,8 @@
         {
             this.context = context;
         }
+
+        public int Id { get; set; }
 
         public string Title { get; set; }
 
@@ -36,6 +37,7 @@
                 return this.NotFound();
             }
 
+            this.Id = book.Id;
             this.Title = book.Title;
             this.Description = book.Description;
             this.ImageUrl = book.ImageUrl;
